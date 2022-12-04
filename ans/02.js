@@ -19,7 +19,6 @@ function printReverseTriangle(pattern) {
   }
 }
 printReverseTriangle(pattern0);
-
 printReverseTriangle(pattern1);
 printReverseTriangle(pattern2);
 
