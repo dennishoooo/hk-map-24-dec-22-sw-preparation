@@ -27,6 +27,15 @@ let data = {
       routeNo: "1R",
       specialRoute: 0,
     },
+    {
+      overnightRoute: 0,
+      routeId: "4",
+      routeName_c: "紅磡 (紅鸞道)  > 昂坪",
+      routeName_e: "Hung Hom (Hung Luen Road)  > Ngong Ping",
+      routeName_s: "红磡 (红鸾道)  > 昂坪",
+      routeNo: "1R",
+      specialRoute: 0,
+    },
   ],
 };
 
@@ -45,3 +54,31 @@ for (let route of routes) {
 }
 
 console.dir({ routeData }, { depth: 3 });
+
+// 07
+
+// keys: ['routeId', 'routeName_e']
+function getRouteData(data, keys) {
+  let routeData = [];
+  for (let route of data) {
+    let routeInfo = {};
+    for (let key of keys) {
+      if (key.startsWith("routeName")) {
+        routeInfo[key] = route[key].split(">");
+        continue;
+      }
+      routeInfo[key] = route[key];
+    }
+    routeData.push(routeInfo);
+  }
+  return routeData;
+}
+
+let q7Result = getRouteData(routes, [
+  "routeNo",
+  "routeId",
+  "routeName_e",
+  "routeName_c",
+]);
+
+console.log(q7Result);
