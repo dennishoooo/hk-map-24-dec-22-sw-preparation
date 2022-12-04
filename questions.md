@@ -94,8 +94,6 @@ Extract the terminal names of both ends of a particular route using the data and
 
 **Q8**
 
-Reuse the name collectors made above
-
 Make a name + score collectors + the game. The result should be as follow:
 
 ```
