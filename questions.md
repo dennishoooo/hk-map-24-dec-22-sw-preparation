@@ -84,7 +84,6 @@ Cont'd of the last question, how do you get information from the above data?
 
 All the route numbers
 All the terminal names
-Bonus: Use list comprehension to get above information
 
 **Q7**
 
